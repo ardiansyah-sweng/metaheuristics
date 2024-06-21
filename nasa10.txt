@@ -1,0 +1,17 @@
+l,l,l,n,n,h,vh,h,n,vh,xh,h,h,h,n,h,n,n,vl,n,h,h,77,80
+l,l,l,n,n,vh,vh,l,n,vh,xh,l,h,n,n,l,vl,l,l,n,h,h,24,648
+l,l,l,n,n,h,vh,n,n,vh,vh,h,n,n,n,n,l,l,vl,n,h,h,23,492
+l,l,n,n,l,h,h,n,l,n,n,h,n,n,n,n,n,h,l,n,vh,n,146,3292
+l,n,n,vh,n,n,h,n,l,h,h,l,vh,vh,h,vh,vl,vh,n,n,xh,n,113,1080
+n,n,n,n,n,n,h,n,l,n,n,n,n,n,n,h,n,h,l,n,h,n,184,1043
+vh,n,n,n,h,h,h,n,l,n,n,l,n,n,n,vh,n,h,l,n,vh,n,61,336
+vh,n,n,h,h,h,vh,n,l,n,n,l,n,n,n,vh,n,h,l,n,xh,n,50,637
+n,n,n,l,n,h,vh,n,l,n,n,n,n,n,n,h,n,h,l,n,vh,n,253,2519
+n,n,h,n,n,h,h,n,h,n,n,l,n,h,n,n,vl,h,vh,n,l,n,159,1048
+n,n,n,n,n,h,vh,n,l,n,n,h,h,h,vh,h,h,h,l,vl,vh,n,324,1735
+n,l,h,h,n,h,vh,n,h,n,h,vh,h,h,n,h,h,n,h,l,xh,n,224,691
+vh,l,l,h,n,h,n,n,h,vh,h,n,h,h,n,h,h,h,n,n,n,n,105,320
+n,l,l,h,n,h,n,n,n,n,n,l,h,h,n,h,h,h,n,n,n,n,173,329
+n,l,h,n,n,h,vh,n,h,n,n,h,n,h,h,h,n,n,n,n,vh,n,597,1705
+h,l,h,n,vh,h,n,l,n,n,h,h,l,l,n,n,vh,vh,n,n,vh,n,155,789
+h,n,n,n,h,h,h,n,l,n,n,n,h,n,n,vh,h,h,l,n,vh,n,170,552

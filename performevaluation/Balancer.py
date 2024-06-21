@@ -14,4 +14,4 @@ class Balancer:
             
         mbre = sumMBRE / len(absoluteErrors)
         mibre = sumMIBRE / len(absoluteErrors)
-        return [mbre, mibre]
+        return {'mbre':mbre, 'mibre':mibre}

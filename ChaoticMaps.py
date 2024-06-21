@@ -17,7 +17,8 @@ class ChaoticMaps:
             return (chaosValue - (1 - (1/2))) / (1/2)
     
     def chebyshev(self, chaosValue):
-        return math.cos(self.iter * math.cos(chaosValue**-1) )
+        #return math.cos(self.iter * math.cos(chaosValue**-1) )
+        return math.cos(chaosValue * math.acos(chaosValue))
     
     def circle(self, chaosValue):
         return math.fmod(chaosValue + 0.2 - (0.5 / (2 * math.pi)) * math.sin(2 * math.pi * chaosValue), 1)
@@ -33,3 +34,9 @@ class ChaoticMaps:
     
     def sinu(self, chaosValue):
         return ( 2.3 * chaosValue**2 ) * math.sin(math.pi) * chaosValue
+    
+    def tent(self, chaosValue):
+        if chaosValue < 0.7:
+            return chaosValue/0.7
+        if chaosValue >= 0.7:
+            return (10/3) * (1 - chaosValue)
