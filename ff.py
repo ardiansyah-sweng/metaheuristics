@@ -27,6 +27,7 @@ class Firefly:
 
     return dimFF
 
+  #TODO <create particular class to be accessed by all optimizer. Write once access anywhere>
   def getBestSolution(self, population):
 
     objValues = []

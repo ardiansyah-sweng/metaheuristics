@@ -26,7 +26,7 @@ class PSO:
         inertiaMin = 0.2
         return inertiaMax - ((inertiaMax - inertiaMin * iter) / inertiaMax)
 
-    def updateVelocity(self, particle, pBest, gBest, inertia):
+    def updateVelocity(self, velocity, particle, pBest, gBest, inertia):
 
         r1 = random.uniform(0,1)
         r2 = random.uniform(0,1)
@@ -34,7 +34,7 @@ class PSO:
         velocities = []
         c1 = c2 = 2
         for i in range(len(self.params['designVariables'])):
-          velocities.append(inertia * particle[i] + 
+          velocities.append(inertia * velocity[i] + 
                             c1 * r1 * (pBest[i] - particle[i]) + c2 * r2 * (gBest[i] - particle[i]))
         return velocities
 
@@ -87,7 +87,8 @@ class PSO:
         for iter in range(self.params['maxIter']):
             inertia = self.calcLDWInertia(iter)
             for i in range(self.params['popSize']):
-                velocity = self.updateVelocity(population[i], pBests[i], gBest, inertia)
+                velocity = self.updateVelocity(velocities[i], population[i], pBests[i], gBest, inertia)
+                velocities[i] = copy.deepcopy(velocity)
                 positions = self.updatingPositions(velocity, population[i])
 
                 population[i] = copy.deepcopy(positions)

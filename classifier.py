@@ -27,7 +27,7 @@ class SVRegression(Classifier):
 
     evaluator = ModelEvaluator(self.X, self.y, self.groups)
 
-    accuracy = evaluator.loocv(SVR(C=penaltyGamma[0], kernel='rbf', gamma=penaltyGamma[1]))
+    accuracy = evaluator.loocv(SVR(C=penaltyGamma[0], kernel='rbf', gamma=penaltyGamma[1], epsilon=0.0001))
 
     # accuracy = evaluator.trainTestSplit(SVR(C=penaltyGamma[0], kernel='rbf', gamma=penaltyGamma[1]))
     #accuracy = evaluator.kFold(SVR(C=penaltyGamma[0], kernel='linear', gamma=penaltyGamma[1]), n_folds=5)

@@ -10,6 +10,9 @@ from initializer import Initializer
 from classifier import SVRegression, GridSVRegression, RandomSVRegression, GridSVRShukla2023, RandomSVRShukla2023
 from ff import Firefly
 from pso_hpo import PSO
+from optimizer.gwo.origin import GreyWolfOptimizer
+from optimizer.gwo.nadimi2021 import Nadimi2021
+from optimizer.gwo.yang2023 import Yang2023
 
 path = "UCP.xlsx"
 df = pd.read_excel(path)
@@ -26,8 +29,9 @@ designVariables = [
 dimension = 2
 
 params = {
-    'popSize': 10,
-    'maxIter': 15,
+    'popSize': 15,
+    'maxIter': 10,
+    'funcEvalLimit': dimension * 10000,
     'designVariables': [
         [0.01, 200],
         [0.01, 50]
@@ -42,15 +46,20 @@ population = initialPopGenerator.createPopulation(params['popSize'])
 #objFunction = GridSVRegression(X, y).evaluate()
 #objFunction = RandomSVRegression(X, y).evaluate()
 #objFunction = GridSVRShukla2023(X, y).evaluate()
-objFunction = RandomSVRShukla2023(X, y).evaluate()
-print(objFunction)
+#objFunction = RandomSVRShukla2023(X, y).evaluate()
+#print(objFunction)
 
 objFunction = SVRegression(X, y, groups, dimension)
 # ff = Firefly(params, objFunction)
 # ff.runFirefly(population)
 
-pso = PSO(params, objFunction)
-pso.runPSO(population)
+#pso = PSO(params, objFunction)
+#pso.runPSO(population)
+
+# gwo = GreyWolfOptimizer(params, objFunction, dimension)
+#gwo = Nadimi2021(params, objFunction, dimension)
+gwo = Yang2023(params, objFunction, dimension)
+gwo.runGWO(population)
 
 #models = [
     # KNeighborsRegressor(n_neighbors=3, leaf_size=20),
